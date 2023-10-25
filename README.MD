@@ -6,12 +6,12 @@
 - “Hobby“ must be displayed in the top right corner in the format “Hobby: %s“ and must be correspond to the current customer hobby. Place it right away after the welcome message. 
 NB! Notice that it must work correctly with all enabled Magento caches
 
-![](\Images\3.png)
+![](./Images/3.png)
 
-![](\Images\5.png)
+![](./Images/5.png)
 
-![](\Images\4.png)
+![](./Images/4.png)
 
-![](\Images\1.png)
+![](./Images/1.png)
 
-![](\Images\2.png)
+![](./Images/2.png)
