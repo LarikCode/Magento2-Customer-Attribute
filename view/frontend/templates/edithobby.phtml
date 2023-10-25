@@ -1,0 +1,22 @@
+<div class="edit-hobby-form">
+    <form id="edit-hobby-form" action="<?= $block->getUrl('customer/hobby/save') ?>" method="post" data-mage-init='{"validation":{}}'>
+        <input name="form_key" type="hidden" value="<?= $block->getFormKey() ?>" />
+
+        <div class="field hobby">
+            <label for="customer_hobby" class="label"><span><?= $block->escapeHtml(__('Hobby')) ?></span></label>
+            <div class="control">
+                <select name="customer_hobby" id="customer_hobby" title="<?= $block->escapeHtmlAttr(__('Hobby')) ?>" class="select">
+                    <?php foreach ($block->getHobbyOptions() as $option): ?>
+                        <option value="<?= $block->escapeHtmlAttr($option['value']) ?>" <?= $block->getSelectedOption($option['value']) ?>><?= $block->escapeHtml($option['label']) ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save Hobby')) ?>"><span><?= $block->escapeHtml(__('Save Hobby')) ?></span></button>
+            </div>
+        </div>
+    </form>
+</div>

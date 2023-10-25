@@ -1,0 +1,19 @@
+{
+    "name": "home/module-illarion-customer-hobby",
+    "description": "N/A",
+    "type": "magento2-module",
+    "license": [],
+    "version": "0.1.0",
+    "require": {
+        "magento/module-customer": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Illarion\\CustomerHobby\\": ""
+        }
+    }
+}
+

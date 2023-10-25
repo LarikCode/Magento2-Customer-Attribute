@@ -1,0 +1,33 @@
+
+type Mutation {
+    updateCustomerHobby(
+        input: UpdateCustomerHobbyInput!
+    ): Hobby @resolver(class: "\\Illarion\\CustomerHobby\\Model\\Resolver\\UpdateCustomerHobby") @doc(description: "Update the customer's hobby attribute.")
+}
+
+input UpdateCustomerHobbyInput {
+    customer_id: Int!
+    hobby: CustomerHobbyEnum!
+}
+
+type Hobby {
+    hobby: String
+}
+
+enum CustomerHobbyEnum {
+    yoga
+    traveling
+    hiking
+}
+
+type Customer {
+    customer_hobby: CustomAttributeValue @resolver(class: "\\Illarion\\CustomerHobby\\Model\\Resolver\\CustomerAttribute") @doc(description: "Get the customer's hobby attribute.")
+}
+
+type CustomAttributeValue {
+    label: String
+    value: String
+}
+
+
+
